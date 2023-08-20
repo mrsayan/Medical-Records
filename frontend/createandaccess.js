@@ -219,7 +219,7 @@ const HealthRecordAbi = [
     "type": "function"
   }
 ];
-const HealthRecordAddress = "0xbf30AA126Ef3F1740464eC5bd992235734e4b93F";
+const HealthRecordAddress = "0x08d0e3957f71783188C5B6BA1B492b47630517e2";
 
 async function addrecord() {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
