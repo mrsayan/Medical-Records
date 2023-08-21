@@ -14,6 +14,7 @@ contract HealthRecord
         uint phNo;
         string bloodType;
         string location;
+        string prescription; // prescription hash of IPFS
         
     }
 
@@ -35,9 +36,9 @@ contract HealthRecord
         return pid;
     }
 
-    function insertPatient(string memory _patientName,uint _age,string memory _gender,uint _phNo,string memory _bloodType,string memory _location)public 
+    function insertPatient(string memory _patientName,uint _age,string memory _gender,uint _phNo,string memory _bloodType,string memory _location, string memory _prescription)public 
     {
-        Patient[pid]=patientDetails(pid,_patientName,_age,_gender,_phNo,_bloodType,_location);
+        Patient[pid]=patientDetails(pid,_patientName,_age,_gender,_phNo,_bloodType,_location,_prescription);
         pid++;
     }
 

@@ -1,225 +1,236 @@
+
 const HealthRecordAbi = [
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "name": "Patient",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "pid",
-        "type": "uint256"
-      },
-      {
-        "internalType": "string",
-        "name": "patientName",
-        "type": "string"
-      },
-      {
-        "internalType": "uint256",
-        "name": "age",
-        "type": "uint256"
-      },
-      {
-        "internalType": "string",
-        "name": "gender",
-        "type": "string"
-      },
-      {
-        "internalType": "uint256",
-        "name": "phNo",
-        "type": "uint256"
-      },
-      {
-        "internalType": "string",
-        "name": "bloodType",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "location",
-        "type": "string"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "name": "Records",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "pid",
-        "type": "uint256"
-      },
-      {
-        "internalType": "string",
-        "name": "hospitalName",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "doctorName",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "speciality",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "referredBy",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "complaints",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "investigatinAdvise",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "medicineAdvice",
-        "type": "string"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [],
-    "name": "pid",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [],
-    "name": "getpid",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "_patientName",
-        "type": "string"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_age",
-        "type": "uint256"
-      },
-      {
-        "internalType": "string",
-        "name": "_gender",
-        "type": "string"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_phNo",
-        "type": "uint256"
-      },
-      {
-        "internalType": "string",
-        "name": "_bloodType",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "_location",
-        "type": "string"
-      }
-    ],
-    "name": "insertPatient",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_pid",
-        "type": "uint256"
-      },
-      {
-        "internalType": "string",
-        "name": "_hospitalName",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "_doctorName",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "_speciality",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "_referredBy",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "_complaints",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "_investigatinAdvise",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "_medicineAdvice",
-        "type": "string"
-      }
-    ],
-    "name": "insertRecord",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  }
-];
-const HealthRecordAddress = "0x08d0e3957f71783188C5B6BA1B492b47630517e2";
+	{
+	  "inputs": [
+		{
+		  "internalType": "uint256",
+		  "name": "",
+		  "type": "uint256"
+		}
+	  ],
+	  "name": "Patient",
+	  "outputs": [
+		{
+		  "internalType": "uint256",
+		  "name": "pid",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "string",
+		  "name": "patientName",
+		  "type": "string"
+		},
+		{
+		  "internalType": "uint256",
+		  "name": "age",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "string",
+		  "name": "gender",
+		  "type": "string"
+		},
+		{
+		  "internalType": "uint256",
+		  "name": "phNo",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "string",
+		  "name": "bloodType",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "location",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "prescription",
+		  "type": "string"
+		}
+	  ],
+	  "stateMutability": "view",
+	  "type": "function",
+	  "constant": true
+	},
+	{
+	  "inputs": [
+		{
+		  "internalType": "uint256",
+		  "name": "",
+		  "type": "uint256"
+		}
+	  ],
+	  "name": "Records",
+	  "outputs": [
+		{
+		  "internalType": "uint256",
+		  "name": "pid",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "string",
+		  "name": "hospitalName",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "doctorName",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "speciality",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "referredBy",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "complaints",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "investigatinAdvise",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "medicineAdvice",
+		  "type": "string"
+		}
+	  ],
+	  "stateMutability": "view",
+	  "type": "function",
+	  "constant": true
+	},
+	{
+	  "inputs": [],
+	  "name": "pid",
+	  "outputs": [
+		{
+		  "internalType": "uint256",
+		  "name": "",
+		  "type": "uint256"
+		}
+	  ],
+	  "stateMutability": "view",
+	  "type": "function",
+	  "constant": true
+	},
+	{
+	  "inputs": [],
+	  "name": "getpid",
+	  "outputs": [
+		{
+		  "internalType": "uint256",
+		  "name": "",
+		  "type": "uint256"
+		}
+	  ],
+	  "stateMutability": "view",
+	  "type": "function",
+	  "constant": true
+	},
+	{
+	  "inputs": [
+		{
+		  "internalType": "string",
+		  "name": "_patientName",
+		  "type": "string"
+		},
+		{
+		  "internalType": "uint256",
+		  "name": "_age",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "string",
+		  "name": "_gender",
+		  "type": "string"
+		},
+		{
+		  "internalType": "uint256",
+		  "name": "_phNo",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "string",
+		  "name": "_bloodType",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "_location",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "_prescription",
+		  "type": "string"
+		}
+	  ],
+	  "name": "insertPatient",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [
+		{
+		  "internalType": "uint256",
+		  "name": "_pid",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "string",
+		  "name": "_hospitalName",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "_doctorName",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "_speciality",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "_referredBy",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "_complaints",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "_investigatinAdvise",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "_medicineAdvice",
+		  "type": "string"
+		}
+	  ],
+	  "name": "insertRecord",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	}
+  ];
+  const HealthRecordAddress = "0x644043159022a562541da058Ed98a197Bde1BDe4";
 
 async function addrecord() {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -262,7 +273,12 @@ async function accessrecord() {
 
   const data = await HealthRecordContract.Patient(patientid.value);
 
-  insertinformationtable(data.patientName,data.pid,data.age,data.gender,data.bloodType,data.phNo,data.location);
+
+  insertinformationtable(data.patientName,data.pid,data.age,data.gender,data.bloodType,data.phNo,data.location, data.prescription);
+
+ 
+
+
 
   for (let i = 0; i < 10; i++) {
     const data = await HealthRecordContract.Records(i);
@@ -274,18 +290,38 @@ async function accessrecord() {
 
 }
 
-function insertinformationtable(pname,pid,page,pgender,pblood,phno,plocation) {
-  const tableEL = document.getElementById('info');
-  const healding1 = document.createElement('h1');
-  healding1.innerText = "Personal Information";
-  const head = document.getElementById('personal-information');
-  head.appendChild(healding1);
-
-  tableEL.innerHTML += '<tr><th>Patient Name:</th><td>'+pname+'</td></tr><tr><th>Patient ID:</th><td>'+pid+'</td></tr><tr><th>Age:</th><td>'+page+'</td></tr><tr><th>Gender:</th><td>'+pgender+'</td></tr><tr><th>Blood Type:</th><td>'+pblood+'</td></tr><tr><th>Mobile Number:</th><td>'+phno+'</td></tr><tr><th>Location:</th><td>'+plocation+'</td></tr>';
-
-}
-function insertrecordtable(hname, dname, special, referr, complain, invest, meds) {
-  const tableEL = document.getElementById('record');
-
-  tableEL.innerHTML += '<tr><th>Hospital Name:</th><td>' + hname + '</td></tr><tr><th>Doctor Name:</th><td>' + dname + '</td></tr><tr><th>Speciality:</th><td>' + special + '</td></tr><tr><th>Referred By:</th><td>' + referr + '</td></tr><tr><th>Complaints:</th><td>' + complain + '</td></tr><tr><th>Investigation Advise:</th><td>' + invest + '</td></tr><tr><th>Medicine Advice:</th><td>' + meds + '</td></tr><br>';
-}
+function insertinformationtable(pname, pid, page, pgender, pblood, phno, plocation, prescription) {
+	const tableEL = document.getElementById('info');
+	const healding1 = document.createElement('h1');
+	healding1.innerText = "Personal Information";
+	const head = document.getElementById('personal-information');
+	head.appendChild(healding1);
+  
+	// Construct the image URL based on the prescription hash
+	const prescriptionImageUrl = `http://localhost:8080/ipfs/${prescription}`;
+  
+	tableEL.innerHTML += `
+	  <tr><th>Patient Name:</th><td>${pname}</td></tr>
+	  <tr><th>Patient ID:</th><td>${pid}</td></tr>
+	  <tr><th>Age:</th><td>${page}</td></tr>
+	  <tr><th>Gender:</th><td>${pgender}</td></tr>
+	  <tr><th>Blood Type:</th><td>${pblood}</td></tr>
+	  <tr><th>Mobile Number:</th><td>${phno}</td></tr>
+	  <tr><th>Location:</th><td>${plocation}</td></tr>
+	  <tr><th>Prescription:</th><td><img src="${prescriptionImageUrl}" alt="Prescription Image" style="width:500px"></td></tr><br>
+	`;
+  }
+  
+  function insertrecordtable(hname, dname, special, referr, complain, invest, meds) {
+	const tableEL = document.getElementById('record');
+  
+	tableEL.innerHTML += `
+	  <tr><th>Hospital Name:</th><td>${hname}</td></tr>
+	  <tr><th>Doctor Name:</th><td>${dname}</td></tr>
+	  <tr><th>Speciality:</th><td>${special}</td></tr>
+	  <tr><th>Referred By:</th><td>${referr}</td></tr>
+	  <tr><th>Complaints:</th><td>${complain}</td></tr>
+	  <tr><th>Investigation Advise:</th><td>${invest}</td></tr>
+	  <tr><th>Medicine Advice:</th><td>${meds}</td></tr><br>
+	`;
+  }

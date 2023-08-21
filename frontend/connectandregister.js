@@ -44,6 +44,11 @@ const HealthRecordAbi = [
         "internalType": "string",
         "name": "location",
         "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "prescription",
+        "type": "string"
       }
     ],
     "stateMutability": "view",
@@ -164,6 +169,11 @@ const HealthRecordAbi = [
         "internalType": "string",
         "name": "_location",
         "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_prescription",
+        "type": "string"
       }
     ],
     "name": "insertPatient",
@@ -220,7 +230,7 @@ const HealthRecordAbi = [
     "type": "function"
   }
 ];
-const HealthRecordAddress = "0x08d0e3957f71783188C5B6BA1B492b47630517e2";
+const HealthRecordAddress = "0x644043159022a562541da058Ed98a197Bde1BDe4";
 
 async function connectWallet() {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -241,6 +251,7 @@ async function addpatient() {
   const element5 = document.getElementById('blood-type');
   const element6 = document.getElementById('location');
 
+
   const patientName = element1.value;
   const Age = element2.value;
   const Gender = element3.value;
@@ -248,8 +259,26 @@ async function addpatient() {
   const bloodType = element5.value;
   const location = element6.value;
 
+  const node = await Ipfs.create();
+  const file = document.getElementById("fileInput").files[0];
+  const results = await node.add(file);
+  // console.log("results", results);
+  const cid = results.cid;
+  // console.log("CID created via ipfs.add:", cid.toString());
+  // const stream = await node.cat(cid);
+  // let readdata = "";
+
+  // for await (const chunk of stream) {
+  //     // chunks of data are returned as a Buffer, convert it back to a string
+  //     readdata += chunk.toString();
+  // }
+
+  // console.log(readdata);
+
+  const ipfsHash = cid.toString();
+
   const patientContract = new ethers.Contract(HealthRecordAddress, HealthRecordAbi, provider);
-  const patient = await patientContract.connect(signer).insertPatient(patientName, Age, Gender, mobilenum, bloodType, location);
+  const patient = await patientContract.connect(signer).insertPatient(patientName, Age, Gender, mobilenum, bloodType, location, ipfsHash);
   await patient.wait();
 
   const HealthRecordContract = new ethers.Contract(HealthRecordAddress, HealthRecordAbi, provider);

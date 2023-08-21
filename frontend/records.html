@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>EHRs | Records</title>
+  <title>Health Plus</title>
   <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
   <script src="./createandaccess.js"></script>
   <link rel="stylesheet" href="style/records.css">
@@ -13,31 +13,11 @@
       <ul>
         <li><a href="EHRs.html">Home</a></li>
         <li><a href="patientadd.html">Patients</a></li>
-        <li><a href="records.html">Records</a></li>
+        <li><a href="records.html">Hospital</a></li>
+        <li><a href="lookup.html">Lookup</a></li>
       </ul>
     </nav>
   </header>
-  <div class="records">
-    <h2>Access Records</h2>
-    <label>Patient ID:</label>
-    <input type="text" id="patient-id" required>
-
-    <section>
-      <div id="personal-information">
-
-      </div>
-      <table>
-        <tbody id="info"></tbody>
-      </table>
-      <br>
-      <div id="record-information"></div>
-      <table>
-        <tbody id="record"></tbody>
-        
-      </table>
-    </section>
-    <button id="deploy-record-button" onclick="accessrecord()">Access</button>
-  </div>
   <div class="container">
     <h1>Create Record</h1>
     <div class="form-group">
@@ -69,7 +49,7 @@
     </form>
   </div>
   <footer>
-    <p>&copy; 2023 Electronic Health Records | Sayan Hazra</p>
+    <p>&copy; 2023 Electronic Health Records | Team ZuckisCuck</p>
   </footer>
 </body>
 
